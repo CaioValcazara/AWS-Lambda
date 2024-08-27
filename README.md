@@ -7,7 +7,9 @@ This project involves creating a system where uploading a file to a specific sto
 # Link to Video Explanation:
 
 step by step:
-  1) 
+
+  1)
+  2) 
 
 
 
