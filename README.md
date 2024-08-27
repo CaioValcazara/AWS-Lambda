@@ -9,8 +9,13 @@ This project involves creating a system where uploading a file to a specific sto
 
 step by step:
 
-  1)
-  2) 
+  1) Create a S3 bucket
+  2) Manage Roles on IAM (Identity Access Management) to access to S3 and SES
+  3) Create the function on Lambda > Add the Trigger
+  4) Create a email identity at SES (Amazon Simple Email Service)
+  5) Deploy Lambda Function
+  6) Upload a file on S3 bucket
+  7) Check at CloudWatch for log details
 
 
 
