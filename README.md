@@ -4,9 +4,6 @@ This project involves creating a system where uploading a file to a specific sto
 
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/AWS-Lambda-S3-flow.png)
 
-<img src="[URL_da_Imagem](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/AWS-Lambda-S3-flow.png)" alt="Texto Alternativo">
-
-[<img src="assets/201.png?raw=true">](http://acs.amazonaws.com/groups/global/AllUsers)
 
 # Link to Video Explanation:
 
