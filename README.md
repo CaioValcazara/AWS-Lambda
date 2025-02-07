@@ -13,26 +13,33 @@ Services Covered:
 
 # Link to Video Explanation:
 
-step by step:
+## step by step:
 
-  1) Create a S3 bucket
-    Access Amazon S3 > Create Bucket > Give the bucket a name > leave the default settings for now 
+# 1) Create a S3 bucket:
 
-  3) Manage Roles on IAM (Identity Access Management) to access to S3 and SES
-    Access IAM > Roles > Create Role > Select AWS Service > On the use case menu, select Lambda > Next > Filter and select the AmazonS3FullAccess, AmazonSESFullAccess and CloudWatchFullAccess.
+  Access Amazon S3 > Create Bucket > Give the bucket a name > leave the default settings for now 
 
-  This Step create a role for our Lambda function and determines which service it need to have access (Least Privilege Access). In this case, it will have full acces to Amazon S3, Amazon SES and CloudWatch. You can also enter in a level of detail ii which capabilities od each service the lambda will have access of.
-  5) Create the function on Lambda > Add the Trigger
+# 2) Manage Roles on IAM (Identity Access Management) to access to S3 and SES:
+     
+  Access IAM > Roles > Create Role > Select AWS Service > On the use case menu, select Lambda > Next > Filter and select the AmazonS3FullAccess, AmazonSESFullAccess and CloudWatchFullAccess.
+
+  This step creates a role for our Lambda function and determines which service it need to have access (Least Privilege Access). 
+  
+  In this case, it will have full acces to Amazon S3, Amazon SES and CloudWatch. 
+  
+  You can also enter in a level of detail ii which capabilities od each service the lambda will have access of.
+  
+# 3) Create the function on Lambda > Add the Trigger
 
   Why Using AWS Lambda? 
      
-    AWS Lambda is a no server needed tool with automatic scalability that has the flexibility to integrates with others services to run a Python code, and for this example, we will be using  boto3 lib to automate process of sending a emails notification when a S3 object is injested.
+  AWS Lambda is a no server needed tool with automatic scalability that has the flexibility to integrates with others services to run a Python code, and for this example, we will be using  boto3 lib to automate process of sending a emails notification when a S3 object is injested.
      
-  7) Create a email identity at SES (Amazon Simple Email Service)
+# 4) Create a email identity at SES (Amazon Simple Email Service)
      
-  9) Deploy Lambda Function
+# 5) Deploy Lambda Function
      
-  11) Upload a file on S3 bucket
+# 6) Upload a file on S3 bucket
       
   13) Check at CloudWatch for log details
       Monitoring
