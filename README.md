@@ -11,7 +11,8 @@ Services Covered:
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/AWS-Lambda-S3-flow.png)
 
 
-# Link to Video Explanation:
+##Link to Video Explanation:
+###TESTE
 
 ## STEP BY STEP:
 
@@ -40,7 +41,31 @@ Services Covered:
 ## 4) Create a email identity at SES (Amazon Simple Email Service)
      
 ## 5) Deploy Lambda Function
-     
+
+    import json
+
+    import boto3
+
+    def lambda_handler(event, context):
+	
+	file_name = event['Records'][0]['s3']['object']['key']
+	bucketname = event['Records'][0]['s3']['bucket']['name']
+	
+	print ("Event Details: ", event)
+	print ("File name: ", file_name)
+	print ("Bucket name: : ", bucketname)
+	subject = 'Event from' + bucketname
+	client = boto3.client("ses")
+	body = """
+			<br>
+			
+			Lambda has been triggered! This is a notification mail to inform you regarding s3 event.
+			The file {} is inserted in the {} bucket.
+		""".format (file_name, bucketname)
+	message = {"Subject": {"Data" : subject}, "Body": {"Html": {"Data" : body}}}
+	response = client.send_email(Source = "caio.valcazara@aluno.ufabc.edu.br", Destination = {"ToAddresses": ["caio.valcazara@aluno.ufabc.edu.br"]}, Message = message)
+	print("The email has sent successfully")
+ 
 ## 6) Upload a file on S3 bucket
       
   13) Check at CloudWatch for log details
