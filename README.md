@@ -10,12 +10,20 @@ This project involves creating a system where uploading a file to a specific sto
 step by step:
 
   1) Create a S3 bucket
-  2) Manage Roles on IAM (Identity Access Management) to access to S3 and SES
-  3) Create the function on Lambda > Add the Trigger
-  4) Create a email identity at SES (Amazon Simple Email Service)
-  5) Deploy Lambda Function
-  6) Upload a file on S3 bucket
-  7) Check at CloudWatch for log details
+     
+  3) Manage Roles on IAM (Identity Access Management) to access to S3 and SES
+     
+  5) Create the function on Lambda > Add the Trigger
+     Why Using AWS Lambda? AWS Lambda is a no server needed tool with automatic scalability that has the flexibility to integrates with others services to run a Python code, and for this example, we will be using  boto3 lib to automate process of sending a emails notification when a S3 object is injested.
+     
+  7) Create a email identity at SES (Amazon Simple Email Service)
+     
+  9) Deploy Lambda Function
+     
+  11) Upload a file on S3 bucket
+      
+  13) Check at CloudWatch for log details
+      Monitoring
 
 
 
