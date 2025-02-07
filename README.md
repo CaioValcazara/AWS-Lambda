@@ -13,13 +13,13 @@ Services Covered:
 
 # Link to Video Explanation:
 
-## step by step:
+## STEP BY STEP:
 
-# 1) Create a S3 bucket:
+## 1) Create a S3 bucket:
 
   Access Amazon S3 > Create Bucket > Give the bucket a name > leave the default settings for now 
 
-# 2) Manage Roles on IAM (Identity Access Management) to access to S3 and SES:
+## 2) Manage Roles on IAM (Identity Access Management) to access to S3 and SES:
      
   Access IAM > Roles > Create Role > Select AWS Service > On the use case menu, select Lambda > Next > Filter and select the AmazonS3FullAccess, AmazonSESFullAccess and CloudWatchFullAccess.
 
@@ -29,17 +29,19 @@ Services Covered:
   
   You can also enter in a level of detail ii which capabilities od each service the lambda will have access of.
   
-# 3) Create the function on Lambda > Add the Trigger
+## 3) Create the function on Lambda > Add the Trigger
+
+  Process: Access Lambda > create function > 
 
   Why Using AWS Lambda? 
      
   AWS Lambda is a no server needed tool with automatic scalability that has the flexibility to integrates with others services to run a Python code, and for this example, we will be using  boto3 lib to automate process of sending a emails notification when a S3 object is injested.
      
-# 4) Create a email identity at SES (Amazon Simple Email Service)
+## 4) Create a email identity at SES (Amazon Simple Email Service)
      
-# 5) Deploy Lambda Function
+## 5) Deploy Lambda Function
      
-# 6) Upload a file on S3 bucket
+## 6) Upload a file on S3 bucket
       
   13) Check at CloudWatch for log details
       Monitoring
