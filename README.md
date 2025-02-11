@@ -15,25 +15,24 @@ Services Covered:
 
 ## 1) Create a S3 bucket:
 
-  Process:
-  
-  -> Access Amazon S3
-  -> Create Bucket
-  -> Give the bucket a name
-  -> Leave the default settings for now.
+  **Process:**
+  1. Access Amazon S3
+  2. Create Bucket
+  3. Give the bucket a name
+  4. Leave the default settings for now.
   
   This step creates a bucket on S3 which will be used to store objects that will be notify when injested.
 
 ## 2) Manage Roles on IAM (Identity Access Management) to access to S3 and SES:
      
-  Process: 
-  -> Access IAM      
-  -> Roles
-  -> Create Role
-  -> Select AWS Service
-  -> On the use case menu, select Lambda
-  -> Next
-  -> Filter and select the AmazonS3FullAccess, AmazonSESFullAccess and CloudWatchFullAccess.
+  **Process:** 
+  1. Access IAM
+  2. Roles
+  3. Create Role
+  4. Select AWS Service
+  5. On the use case menu, select Lambda
+  6. Next
+  7. Filter and select the AmazonS3FullAccess, AmazonSESFullAccess and CloudWatchFullAccess.
   
   ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/IAM_Role_Lambda.png)
 
@@ -49,21 +48,22 @@ Services Covered:
      
   AWS Lambda is a no server needed tool with automatic scalability that has the flexibility to integrates with others services to run a Python code, and for this example, we will be using  boto3 lib to automate process of sending a emails notification when a S3 object is injested.
   
-  Process 3.1: 
+  **Process 3.1:** 
   Access Lambda > Function > create function > give it a name > select the Python Version (in this case, Python 3.13) > In the Permission section, change the default execution role for the created on step 2 by selection "use an existing role" -> Create Function
 
-  Process 3.2: 
-  -> Click on Add Trigger
+  **Process 3.2:** 
+  1. Click on Add Trigger
 
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/lambda_adding_trigger.png)
 
 -> Filter for S3 Bucket -> Select the Bcuket create on step 1 -> Select the event type to be "all object create events" -> check the "Recursive Invocation" box
 
-Process 3.3: On Code Section, paste the following code (you can also find the code on AWS-Lambda repo):
+**Process 3.3:** On Code Section, paste the following code (you can also find the code on AWS-Lambda repo):
 
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/Lambda_Code_Section.png)
-    
-    import json
+```md
+# 🚀 Guia de Uso  
+import json
     
     import boto3
 
@@ -85,8 +85,10 @@ Process 3.3: On Code Section, paste the following code (you can also find the co
 		""".format (file_name, bucketname)
 	message = {"Subject": {"Data" : subject}, "Body": {"Html": {"Data" : body}}}
 	response = client.send_email(Source = "YOUR EMAIL", Destination = {"ToAddresses": ["YOUR EMAIL"]}, Message = message)
-	print("The email has sent successfully")
+	print("The email has sent successfully")   
 
+
+```
 Why using boto3?
 
 ATTETION on the sourve and destination email highlighted as "YOUR EMAIL".
@@ -107,15 +109,9 @@ ATTETION on the sourve and destination email highlighted as "YOUR EMAIL".
 Reference:
 - https://docs.aws.amazon.com/pt_br/lambda/latest/dg/with-s3-example.html
 
-
-
-### **Passos**
 1. Acesse o repositório no GitHub.
 2. Vá até a aba **Wiki** e clique em **"Create the first page"**.
 3. Estruture as seções com títulos e links internos.
 4. Use Markdown para formatar o conteúdo.
 
-Exemplo:
-```md
-# 🚀 Guia de Uso
 
