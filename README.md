@@ -10,7 +10,6 @@ Services Covered:
 
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/AWS-Lambda-S3-flow.png)
 
-
 ##Link to Video Explanation:
 
 ## 1) Create a S3 bucket:
@@ -49,20 +48,24 @@ Services Covered:
   AWS Lambda is a no server needed tool with automatic scalability that has the flexibility to integrates with others services to run a Python code, and for this example, we will be using  boto3 lib to automate process of sending a emails notification when a S3 object is injested.
   
   **Process 3.1:** 
-  Access Lambda > Function > create function > give it a name > select the Python Version (in this case, Python 3.13) > In the Permission section, change the default execution role for the created on step 2 by selection "use an existing role" -> Create Function
+  1. Access Lambda
+  2. Function
+  3. Create function
+  4. Give it a name
+  5. Select the Python Version (in this case, Python 3.13)
+  6. In the Permission section, change the default execution role for the created on step 2 by selection "use an existing role"
+  7. Create Function
 
   **Process 3.2:** 
-  1. Click on Add Trigger
+  1. Click on Add Trigger												![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/lambda_adding_trigger.png)
+  2. Filter for S3 Bucket -> Select the Bcuket create on step 1 -> Select the event type to be "all object create events" -> check the "Recursive Invocation" box
 
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/lambda_adding_trigger.png)
-
--> Filter for S3 Bucket -> Select the Bcuket create on step 1 -> Select the event type to be "all object create events" -> check the "Recursive Invocation" box
-
-**Process 3.3:** On Code Section, paste the following code (you can also find the code on AWS-Lambda repo):
+**Process 3.3:** 
+1. On Code Section, paste the following code (you can also find the code on AWS-Lambda repo):
 
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/Lambda_Code_Section.png)
 ```md
-# 🚀 Guia de Uso  
+#  
 import json
     
     import boto3
