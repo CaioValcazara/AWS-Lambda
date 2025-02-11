@@ -20,7 +20,7 @@ Services Covered:
   
   This step creates a bucket on S3 which will be used to store objects that will be notify when injested.
 
-## 2) Manage Roles on IAM (Identity Access Management) to access to S3 and SES:
+## 2) Manage Roles on IAM to access S3 and SES:
      
   **Process:** 
   1. Access IAM
@@ -39,7 +39,7 @@ Services Covered:
   
   You can also enter in a level of detail ii which capabilities od each service the lambda will have access of.
   
-## 3) Create the function on Lambda and Add the Trigger
+## 3) Create the function on Lambda and Add the Trigger:
 
   Why Using AWS Lambda? 
      
@@ -98,7 +98,7 @@ managing RDS databases
 
 **ATTETION** on the sourve and destination email highlighted as "YOUR EMAIL".
 
-## 4) Create a email identity at SES (Amazon Simple Email Service)
+## 4) Create an email identity at SES:
   
   **Process:** 
   1. Search for SES
@@ -111,12 +111,12 @@ managing RDS databases
   7. Finally, check your input email by clicking on the url sent by AWS in the same input email
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/SES_email_verification.png)
 
-## 5) Deploy Lambda Function
+## 5) Deploy Lambda Function:
   
   **Process:**
   1.  Seach for Lambda
   2.  Click on the Function created
-  3.  Press the Deploy Button
+  3.  Press the "Deploy" Button
 
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/Deploy_Lambda.png)
   
