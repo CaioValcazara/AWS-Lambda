@@ -2,10 +2,10 @@
 This project involves creating a system where uploading a file to a specific storage location (S3bucket) triggers an automated process via AWS Lambda (email is sent with is verified by Amazon SES). In addition, all logs details are diplayed on CloudWatch.
 
 Services Covered:
-* AWS S3 
+* AWS S3 (Simple Storage Service)
 * AWS IAM (Identity Access Management)
 * AWS Lambda (using Python Boto3 lib)
-* AWS SES
+* AWS SES (Simple Email Service)
 * AWS CloudWatch
 
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/AWS-Lambda-S3-flow.png)
@@ -22,6 +22,7 @@ Services Covered:
 ## 2) Manage Roles on IAM (Identity Access Management) to access to S3 and SES:
      
   Process: Access IAM > Roles > Create Role > Select AWS Service > On the use case menu, select Lambda > Next > Filter and select the AmazonS3FullAccess, AmazonSESFullAccess and CloudWatchFullAccess.
+  
   ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/IAM_Role_Lambda.png)
 
   This step creates a role for our Lambda function and determines which service it need to have access (Least Privilege Access). 
@@ -39,11 +40,15 @@ Services Covered:
   Process 3.1: Access Lambda > Function > create function > give it a name > select the Python Version (in this case, Python 3.13) > In the Permission section, change the default execution role for the created on step 2 by selection "use an existing role" -> Create Function
 
 Process 3.2: Click on Add Trigger
+
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/lambda_adding_trigger.png)
+
 -> Filter for S3 Bucket -> Select the Bcuket create on step 1 -> Select the event type to be "all object create events" -> check the "Recursive Invocation" box
 
 Process 3.3: On Code Section, paste the following code (you can also find the code on AWS-Lambda repo):
-	
+
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/Lambda_Code_Section.png)
+    
     import json
     
     import boto3
@@ -65,10 +70,16 @@ Process 3.3: On Code Section, paste the following code (you can also find the co
 			The file {} is inserted in the {} bucket.
 		""".format (file_name, bucketname)
 	message = {"Subject": {"Data" : subject}, "Body": {"Html": {"Data" : body}}}
-	response = client.send_email(Source = "caio.valcazara@aluno.ufabc.edu.br", Destination = {"ToAddresses": ["caio.valcazara@aluno.ufabc.edu.br"]}, Message = message)
+	response = client.send_email(Source = "YOUR EMAIL", Destination = {"ToAddresses": ["YOUR EMAIL"]}, Message = message)
 	print("The email has sent successfully")
 
+Why using boto3?
+
+ATTETION on the sourve and destination email highlighted as "YOUR EMAIL".
+
 ## 4) Create a email identity at SES (Amazon Simple Email Service)
+  
+  Process: Search for SES -> 
      
 ## 5) Deploy Lambda Function
  
