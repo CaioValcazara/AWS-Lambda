@@ -15,13 +15,24 @@ Services Covered:
 
 ## 1) Create a S3 bucket:
 
-  Process: Access Amazon S3 -> Create Bucket -> Give the bucket a name -> leave the default settings for now.
-
+  Process:
+  -> Process: Access Amazon S3     
+  -> Create Bucket
+  -> Give the bucket a name
+  -> Leave the default settings for now.
+  
   This step creates a bucket on S3 which will be used to store objects that will be notify when injested.
 
 ## 2) Manage Roles on IAM (Identity Access Management) to access to S3 and SES:
      
-  Process: Access IAM > Roles > Create Role > Select AWS Service > On the use case menu, select Lambda > Next > Filter and select the AmazonS3FullAccess, AmazonSESFullAccess and CloudWatchFullAccess.
+  Process: 
+  -> Access IAM      
+  -> Roles
+  -> Create Role
+  -> Select AWS Service
+  -> On the use case menu, select Lambda
+  -> Next
+  -> Filter and select the AmazonS3FullAccess, AmazonSESFullAccess and CloudWatchFullAccess.
   
   ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/IAM_Role_Lambda.png)
 
@@ -37,9 +48,11 @@ Services Covered:
      
   AWS Lambda is a no server needed tool with automatic scalability that has the flexibility to integrates with others services to run a Python code, and for this example, we will be using  boto3 lib to automate process of sending a emails notification when a S3 object is injested.
   
-  Process 3.1: Access Lambda > Function > create function > give it a name > select the Python Version (in this case, Python 3.13) > In the Permission section, change the default execution role for the created on step 2 by selection "use an existing role" -> Create Function
+  Process 3.1: 
+  Access Lambda > Function > create function > give it a name > select the Python Version (in this case, Python 3.13) > In the Permission section, change the default execution role for the created on step 2 by selection "use an existing role" -> Create Function
 
-Process 3.2: Click on Add Trigger
+  Process 3.2: 
+  -> Click on Add Trigger
 
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/lambda_adding_trigger.png)
 
