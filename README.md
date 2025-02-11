@@ -17,7 +17,7 @@ Services Covered:
 
   Process:
   
-  -> Process: Access Amazon S3     
+  -> Access Amazon S3
   -> Create Bucket
   -> Give the bucket a name
   -> Leave the default settings for now.
