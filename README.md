@@ -57,7 +57,8 @@ Services Covered:
   7. Create Function
 
   **Process 3.2:** 
-  1. Click on Add Trigger												![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/lambda_adding_trigger.png)
+  1. Click on Add Trigger											    
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/lambda_adding_trigger.png)
   2. Filter for S3 Bucket
   3. Select the Bcuket create on step 1
   4. Select the event type to be "all object create events"
@@ -103,20 +104,21 @@ managing RDS databases
   
   **Process:** 
   1. Search for SES
-  2. In the Configuration Section, click on "Identities" 								![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/SES_identity.png)
+  2. In the Configuration Section, click on "Identities" 							    ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/SES_identity.png)
   3. Click on "Create Identity"
   4. Select "Email Address"
   5. Type your desired email ID on the "Email Address" field
   6. Click on "Create Identity"
   7. Finally, check your input email by clicking on the url sent by AWS in the same input email
-     ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/SES_email_verification.png)
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/SES_email_verification.png)
 
 ## 5) Deploy Lambda Function
   
   **Process:**
-  1.  sadas
-  2.  asda
-  3.  asda
+  1.  Seach for Lambda
+  2.  Click on the Function created
+  3.  Press the Deploy Button
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/Deploy_Lambda.png)
   
 ## 6) Upload a file on S3 bucket
       
