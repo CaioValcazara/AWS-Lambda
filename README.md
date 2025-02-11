@@ -118,12 +118,23 @@ managing RDS databases
   1.  Seach for Lambda
   2.  Click on the Function created
   3.  Press the Deploy Button
+
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/Deploy_Lambda.png)
   
 ## 6) Upload a file on S3 bucket
-      
+
+  **Process:**
+  1. Search for S3
+  2. Click on the S3 Bucket created on step 1
+  3. Click on "Upload" button
+  4. Upload any file
+
 ## 7) Check at CloudWatch for log details Monitoring
 
+  **Process:**
+  1. Search CloudWatch
+  2. On Logs Section, click Log groups
+  3. 
 
 
 Reference:
