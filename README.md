@@ -104,7 +104,8 @@ managing RDS databases
   
   **Process:** 
   1. Search for SES
-  2. In the Configuration Section, click on "Identities" 							    ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/SES_identity.png)
+  2. In the Configuration Section, click on "Identities"
+  ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/SES_identity.png)
   3. Click on "Create Identity"
   4. Select "Email Address"
   5. Type your desired email ID on the "Email Address" field
@@ -133,9 +134,12 @@ managing RDS databases
 
   **Process:**
   1. Search CloudWatch
-  2. On Logs Section, click Log groups
-  3. 
+  2. On Logs Section, click Log groups and then on you trigger created to see the logs
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/cloudwatch.png)
 
+You can see in detail all logs for each event that trigges the lambda function.
+
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/log+events.png)
 
 Reference:
 - https://docs.aws.amazon.com/pt_br/lambda/latest/dg/with-s3-example.html
