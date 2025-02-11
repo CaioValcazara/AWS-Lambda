@@ -19,5 +19,5 @@ def lambda_handler(event, context):
 			The file {} is inserted in the {} bucket.
 		""".format (file_name, bucketname)
 	message = {"Subject": {"Data" : subject}, "Body": {"Html": {"Data" : body}}}
-	response = client.send_email(Source = "caio.valcazara@aluno.ufabc.edu.br", Destination = {"ToAddresses": ["caio.valcazara@aluno.ufabc.edu.br"]}, Message = message)
+	response = client.send_email(Source = "YOUR EMAIL", Destination = {"ToAddresses": ["YOUR EMAIL"]}, Message = message)
 	print("The email has sent successfully")
