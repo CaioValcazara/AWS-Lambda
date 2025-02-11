@@ -58,15 +58,17 @@ Services Covered:
 
   **Process 3.2:** 
   1. Click on Add Trigger												![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/lambda_adding_trigger.png)
-  2. Filter for S3 Bucket -> Select the Bcuket create on step 1 -> Select the event type to be "all object create events" -> check the "Recursive Invocation" box
+  2. Filter for S3 Bucket
+  3. Select the Bcuket create on step 1
+  4. Select the event type to be "all object create events"
+  5. Check the "Recursive Invocation" box
 
 **Process 3.3:** 
 1. On Code Section, paste the following code (you can also find the code on AWS-Lambda repo):
 
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/Lambda_Code_Section.png)
 ```md
-#  
-import json
+    import json
     
     import boto3
 
@@ -88,33 +90,42 @@ import json
 		""".format (file_name, bucketname)
 	message = {"Subject": {"Data" : subject}, "Body": {"Html": {"Data" : body}}}
 	response = client.send_email(Source = "YOUR EMAIL", Destination = {"ToAddresses": ["YOUR EMAIL"]}, Message = message)
-	print("The email has sent successfully")   
-
-
+	print("The email has sent successfully")
 ```
-Why using boto3?
+**Why using boto3?**
 
-ATTETION on the sourve and destination email highlighted as "YOUR EMAIL".
+Used to Automates AWS services for tasks like creating EC2 instances, S3 buckets, or 
+managing RDS databases
+
+**ATTETION** on the sourve and destination email highlighted as "YOUR EMAIL".
 
 ## 4) Create a email identity at SES (Amazon Simple Email Service)
   
-  Process: Search for SES -> 
-     
+  **Process:** 
+  1. Search for SES
+  2. In the Configuration Section, click on "Identities" 								![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/SES_identity.png)
+  3. Click on "Create Identity"
+  4. Select "Email Address"
+  5. Type your desired email ID on the "Email Address" field
+  6. Click on "Create Identity"
+  7. Finally, check your input email by clicking on the url sent by AWS in the same input email
+     ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/SES_email_verification.png)
+
 ## 5) Deploy Lambda Function
- 
+  
+  **Process:**
+  1.  sadas
+  2.  asda
+  3.  asda
+  
 ## 6) Upload a file on S3 bucket
       
-  ) Check at CloudWatch for log details
-      Monitoring
+## 7) Check at CloudWatch for log details Monitoring
 
 
 
 Reference:
 - https://docs.aws.amazon.com/pt_br/lambda/latest/dg/with-s3-example.html
-
-1. Acesse o repositório no GitHub.
-2. Vá até a aba **Wiki** e clique em **"Create the first page"**.
-3. Estruture as seções com títulos e links internos.
-4. Use Markdown para formatar o conteúdo.
+- https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/Python_For_DevOps_Complete_Notes_1738871563.pdf
 
 
