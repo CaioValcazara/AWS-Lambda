@@ -16,10 +16,11 @@ Services Covered:
 ## 1) Create a S3 bucket:
 
   Process:
-  	-> Process: Access Amazon S3     
-  	-> Create Bucket
-  	-> Give the bucket a name
-  	-> Leave the default settings for now.
+  
+  -> Process: Access Amazon S3     
+  -> Create Bucket
+  -> Give the bucket a name
+  -> Leave the default settings for now.
   
   This step creates a bucket on S3 which will be used to store objects that will be notify when injested.
 
