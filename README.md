@@ -108,3 +108,14 @@ Reference:
 - https://docs.aws.amazon.com/pt_br/lambda/latest/dg/with-s3-example.html
 
 
+
+### **Passos**
+1. Acesse o repositório no GitHub.
+2. Vá até a aba **Wiki** e clique em **"Create the first page"**.
+3. Estruture as seções com títulos e links internos.
+4. Use Markdown para formatar o conteúdo.
+
+Exemplo:
+```md
+# 🚀 Guia de Uso
+
