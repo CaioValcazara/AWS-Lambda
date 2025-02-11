@@ -10,15 +10,13 @@ Services Covered:
 
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/AWS-Lambda-S3-flow.png)
 
-##Link to Video Explanation:
-
 ## 1) Create a S3 bucket:
 
   **Process:**
   1. Access Amazon S3
-  2. Create Bucket
+  2. Click on "Create Bucket"
   3. Give the bucket a name
-  4. Leave the default settings for now.
+  4. Leave the default settings for now
   
   This step creates a bucket on S3 which will be used to store objects that will be notify when injested.
 
@@ -26,12 +24,12 @@ Services Covered:
      
   **Process:** 
   1. Access IAM
-  2. Roles
+  2. Clickk on "Roles"
   3. Create Role
-  4. Select AWS Service
-  5. On the use case menu, select Lambda
-  6. Next
-  7. Filter and select the AmazonS3FullAccess, AmazonSESFullAccess and CloudWatchFullAccess.
+  4. Select "AWS Service"
+  5. On the use case menu, select "Lambda"
+  6. Click on "Next"
+  7. Filter and select the "AmazonS3FullAccess", "AmazonSESFullAccess" and "CloudWatchFullAccess".
   
   ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/IAM_Role_Lambda.png)
 
@@ -49,18 +47,18 @@ Services Covered:
   
   **Process 3.1:** 
   1. Access Lambda
-  2. Function
-  3. Create function
+  2. Click on "Function"
+  3. "Create function"
   4. Give it a name
   5. Select the Python Version (in this case, Python 3.13)
   6. In the Permission section, change the default execution role for the created on step 2 by selection "use an existing role"
-  7. Create Function
+  7. Click on "Create Function"
 
   **Process 3.2:** 
-  1. Click on Add Trigger											    
+  1. Click on "Add Trigger"											    
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/lambda_adding_trigger.png)
   2. Filter for S3 Bucket
-  3. Select the Bcuket create on step 1
+  3. Select the Bucket create on step 1
   4. Select the event type to be "all object create events"
   5. Check the "Recursive Invocation" box
 
@@ -129,6 +127,10 @@ managing RDS databases
   2. Click on the S3 Bucket created on step 1
   3. Click on "Upload" button
   4. Upload any file
+
+When a File is uploaded, the following notification via outlook will be displayed:
+
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/notification.jpeg)
 
 ## 7) Check at CloudWatch for log details Monitoring
 
