@@ -12,9 +12,6 @@ Services Covered:
 
 
 ##Link to Video Explanation:
-###TESTE
-
-## STEP BY STEP:
 
 ## 1) Create a S3 bucket:
 
@@ -25,6 +22,7 @@ Services Covered:
 ## 2) Manage Roles on IAM (Identity Access Management) to access to S3 and SES:
      
   Process: Access IAM > Roles > Create Role > Select AWS Service > On the use case menu, select Lambda > Next > Filter and select the AmazonS3FullAccess, AmazonSESFullAccess and CloudWatchFullAccess.
+  ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/IAM_Role_Lambda.png)
 
   This step creates a role for our Lambda function and determines which service it need to have access (Least Privilege Access). 
   
@@ -42,14 +40,12 @@ Services Covered:
 
 Process 3.2: Click on Add Trigger
 ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/lambda_adding_trigger.png)
--> Filter for S3 Bucket -> Select the Bcuket create on step 1 -> Select the event type to be "all object create events" -> check the "Recursive invocation" box
+-> Filter for S3 Bucket -> Select the Bcuket create on step 1 -> Select the event type to be "all object create events" -> check the "Recursive Invocation" box
 
-## 4) Create a email identity at SES (Amazon Simple Email Service)
-     
-## 5) Deploy Lambda Function
-
+Process 3.3: On Code Section, paste the following code (you can also find the code on AWS-Lambda repo):
+	
     import json
-
+    
     import boto3
 
     def lambda_handler(event, context):
@@ -71,10 +67,14 @@ Process 3.2: Click on Add Trigger
 	message = {"Subject": {"Data" : subject}, "Body": {"Html": {"Data" : body}}}
 	response = client.send_email(Source = "caio.valcazara@aluno.ufabc.edu.br", Destination = {"ToAddresses": ["caio.valcazara@aluno.ufabc.edu.br"]}, Message = message)
 	print("The email has sent successfully")
+
+## 4) Create a email identity at SES (Amazon Simple Email Service)
+     
+## 5) Deploy Lambda Function
  
 ## 6) Upload a file on S3 bucket
       
-  13) Check at CloudWatch for log details
+  ) Check at CloudWatch for log details
       Monitoring
 
 
