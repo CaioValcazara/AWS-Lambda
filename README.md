@@ -31,13 +31,13 @@ Services Covered:
   6. Click on "Next"
   7. Filter and select the "AmazonS3FullAccess", "AmazonSESFullAccess" and "CloudWatchFullAccess".
   
-  ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/IAM_Role_Lambda.png)
+  ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/IAM_Role_Lambda.png)
 
   This step creates a role for our Lambda function and determines which service it need to have access (Least Privilege Access). 
   
   In this case, it will have full acces to Amazon S3, Amazon SES and CloudWatch. 
   
-  You can also enter in a level of detail ii which capabilities od each service the lambda will have access of.
+  You can also enter in a level of detail in which capabilities of each service the lambda will have access of.
   
 ## 3) Create the function on Lambda and Add the Trigger:
 
@@ -56,7 +56,7 @@ Services Covered:
 
   **Process 3.2:** 
   1. Click on "Add Trigger"											    
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/lambda_adding_trigger.png)
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/lambda_adding_trigger.png)
   2. Filter for S3 Bucket
   3. Select the Bucket create on step 1
   4. Select the event type to be "all object create events"
@@ -103,13 +103,13 @@ managing RDS databases
   **Process:** 
   1. Search for SES
   2. In the Configuration Section, click on "Identities"
-  ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/SES_identity.png)
+  ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/SES_identity.png)
   3. Click on "Create Identity"
   4. Select "Email Address"
   5. Type your desired email ID on the "Email Address" field
   6. Click on "Create Identity"
   7. Finally, check your input email by clicking on the url sent by AWS in the same input email
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/SES_email_verification.png)
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/SES_email_verification.png)
 
 ## 5) Deploy Lambda Function:
   
@@ -118,7 +118,7 @@ managing RDS databases
   2.  Click on the Function created
   3.  Press the "Deploy" Button
 
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/Deploy_Lambda.png)
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/Deploy_Lambda.png)
   
 ## 6) Upload a file on S3 bucket
 
@@ -130,18 +130,18 @@ managing RDS databases
 
 When a File is uploaded, the following notification via outlook will be displayed:
 
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/notification.jpeg)
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/notification.jpeg)
 
 ## 7) Check at CloudWatch for log details Monitoring
 
   **Process:**
   1. Search CloudWatch
   2. On Logs Section, click Log groups and then on you trigger created to see the logs
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/cloudwatch.png)
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/cloudwatch.png)
 
 You can see in detail all logs for each event that trigges the lambda function.
 
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/log+events.png)
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/log+events.png)
 
 Reference:
 - https://docs.aws.amazon.com/pt_br/lambda/latest/dg/with-s3-example.html
