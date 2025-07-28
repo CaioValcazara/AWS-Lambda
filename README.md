@@ -65,7 +65,7 @@ Services Covered:
 **Process 3.3:** 
 1. On Code Section, paste the following code (you can also find the code on AWS-Lambda repo):
 
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/Lambda_Code_Section.png)
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/Lambda_Code_Section.png)
 ```md
     import json
     
