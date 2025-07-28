@@ -8,7 +8,7 @@ Services Covered:
 * AWS SES (Simple Email Service)
 * AWS CloudWatch
 
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/AWS-Lambda-S3-flow.png)
+![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/lambda_notification_architecture.png)
 
 ## 1) Create a S3 bucket:
 
@@ -103,7 +103,6 @@ managing RDS databases
   **Process:** 
   1. Search for SES
   2. In the Configuration Section, click on "Identities"
-  ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/SES_identity.png)
   3. Click on "Create Identity"
   4. Select "Email Address"
   5. Type your desired email ID on the "Email Address" field
