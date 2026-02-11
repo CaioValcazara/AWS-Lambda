@@ -31,7 +31,7 @@ Services Covered:
   6. Click on "Next"
   7. Filter and select the "AmazonS3FullAccess", "AmazonSESFullAccess" and "CloudWatchFullAccess".
   
-  ![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/IAM_Role_Lambda.png)
+  <img width="676" height="193" alt="Image" src="https://github.com/user-attachments/assets/8b6cd478-0ef9-40c6-ad29-d62a80c51bed" />
 
   This step creates a role for our Lambda function and determines which service it need to have access (Least Privilege Access). 
   
