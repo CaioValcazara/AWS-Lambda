@@ -8,7 +8,7 @@ Services Covered:
 * AWS SES (Simple Email Service)
 * AWS CloudWatch
 
-![AWS-Lambda-S3-flow](https://1drv.ms/f/c/bce03ce034d25b3c/IgCVcOxXL9J0Q5SHd0Gr60FzAYCcshlHWL1KvHl5oMXEuQc?e=vOw3g4)
+<img width="1256" height="736" alt="Image" src="https://github.com/user-attachments/assets/8040393e-d1a7-41ea-9d3b-49074c659e86" />
 
 ## 1) Create a S3 bucket:
 
@@ -55,8 +55,9 @@ Services Covered:
   7. Click on "Create Function"
 
   **Process 3.2:** 
-  1. Click on "Add Trigger"											    
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/lambda_adding_trigger.png)
+  1. Click on "Add Trigger"									    
+<img width="869" height="446" alt="Image" src="https://github.com/user-attachments/assets/a8892b78-3de1-4ca9-8e86-5550031e380c" />
+  
   2. Filter for S3 Bucket
   3. Select the Bucket create on step 1
   4. Select the event type to be "all object create events"
@@ -65,9 +66,9 @@ Services Covered:
 **Process 3.3:** 
 1. On Code Section, paste the following code (you can also find the code on AWS-Lambda repo):
 
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/Lambda_Code_Section.png)
-```md
-    import json
+<img width="1848" height="738" alt="Image" src="https://github.com/user-attachments/assets/4f0d6a3f-8c47-4ba3-8026-517f118322c5" />
+
+	import json
     
     import boto3
 
@@ -90,7 +91,7 @@ Services Covered:
 	message = {"Subject": {"Data" : subject}, "Body": {"Html": {"Data" : body}}}
 	response = client.send_email(Source = "YOUR EMAIL", Destination = {"ToAddresses": ["YOUR EMAIL"]}, Message = message)
 	print("The email has sent successfully")
-```
+
 **Why using boto3?**
 
 Used to Automates AWS services for tasks like creating EC2 instances, S3 buckets, or 
@@ -108,7 +109,7 @@ managing RDS databases
   5. Type your desired email ID on the "Email Address" field
   6. Click on "Create Identity"
   7. Finally, check your input email by clicking on the url sent by AWS in the same input email
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/SES_email_verification.png)
+<img width="988" height="669" alt="Image" src="https://github.com/user-attachments/assets/d6cfef7b-e847-4ed3-8b7c-b5a6a5e78818" />
 
 ## 5) Deploy Lambda Function:
   
@@ -117,7 +118,7 @@ managing RDS databases
   2.  Click on the Function created
   3.  Press the "Deploy" Button
 
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/Deploy_Lambda.png)
+<img width="1625" height="754" alt="Image" src="https://github.com/user-attachments/assets/c6286a15-e5da-465d-8ead-9da3b30e71bd" />
   
 ## 6) Upload a file on S3 bucket
 
@@ -129,18 +130,18 @@ managing RDS databases
 
 When a File is uploaded, the following notification via outlook will be displayed:
 
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/notification.jpeg)
+![Image](https://github.com/user-attachments/assets/21d0cd07-eccc-482c-b451-f7610debe97f)
 
 ## 7) Check at CloudWatch for log details Monitoring
 
   **Process:**
   1. Search CloudWatch
   2. On Logs Section, click Log groups and then on you trigger created to see the logs
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/cloudwatch.png)
+<img width="906" height="543" alt="Image" src="https://github.com/user-attachments/assets/9b90a995-0d72-4bfe-a4d4-69433bb17f95" />
 
 You can see in detail all logs for each event that trigges the lambda function.
 
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/log+events.png)
+<img width="1603" height="516" alt="Image" src="https://github.com/user-attachments/assets/755d3c80-96f3-4e71-bb3f-ef4514673e93" />
 
 Reference:
 - https://docs.aws.amazon.com/pt_br/lambda/latest/dg/with-s3-example.html
