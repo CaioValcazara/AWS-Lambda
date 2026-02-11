@@ -145,6 +145,6 @@ You can see in detail all logs for each event that trigges the lambda function.
 
 Reference:
 - https://docs.aws.amazon.com/pt_br/lambda/latest/dg/with-s3-example.html
-- https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/Python_For_DevOps_Complete_Notes_1738871563.pdf
+- [Python_for_DevOps_Mohammad_Saji](https://1drv.ms/b/c/bce03ce034d25b3c/IQBfxWD6VuHgQbEr7mMqFob5ARA_O6gBnfdg5W6AV1d600g?e=WKgGAf)
 
 
