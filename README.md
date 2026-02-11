@@ -8,7 +8,7 @@ Services Covered:
 * AWS SES (Simple Email Service)
 * AWS CloudWatch
 
-![AWS-Lambda-S3-flow](https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/lambda_notification_architecture.png)
+![AWS-Lambda-S3-flow]([https://aws-bucket-caio.s3.sa-east-1.amazonaws.com/github-lambda-automation/lambda_notification_architecture.png](https://1drv.ms/f/c/bce03ce034d25b3c/IgCVcOxXL9J0Q5SHd0Gr60FzAYCcshlHWL1KvHl5oMXEuQc?e=vOw3g4))
 
 ## 1) Create a S3 bucket:
 
